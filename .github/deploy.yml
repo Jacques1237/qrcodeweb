@@ -1,9 +1,13 @@
 name: Deploy to GoDaddy via FTP
 
 on:
+  pull:
+    branches:
+      - main  # or the branch you want to deploy from
   push:
     branches:
       - main  # or the branch you want to deploy from
+  workflow_dispatch:  # Allow manual trigger from GitHub Actions tab
 
 jobs:
   deploy:
