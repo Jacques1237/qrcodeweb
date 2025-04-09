@@ -17,5 +17,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/  # Change to your build folder
+          local-dir: ./  # Change to your build folder
           server-dir: /public_html/  # Change to your folder on GoDaddy if needed
