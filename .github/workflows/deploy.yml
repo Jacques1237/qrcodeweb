@@ -19,5 +19,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # Change to your build folder
           server-dir: /public_html/   # Change to your folder on GoDaddy if needed
-          port: 21
+          port: 22  # SFTP typically uses port 22
+          protocol: sftp
           
