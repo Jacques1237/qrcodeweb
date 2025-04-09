@@ -14,10 +14,10 @@ jobs:
       - name: Deploy to GoDaddy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}  # GoDaddy FTP server address
-          ftp-username: ${{ secrets.FTP_USERNAME }}  # Your FTP username
-          ftp-password: ${{ secrets.FTP_PASSWORD }}  # Your FTP password
-          local-dir: ./  # Path to your local folder to deploy (adjust as needed)
-          remote-dir: /home/m7ryb96exju0/  # Path to your GoDaddy folder
-          ftp-port: 21  # Explicit FTPS or FTP port (use 21 for FTP)
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./  # Change to your build folder
+          server-dir: /home/m7ryb96exju0/  # Change to your folder on GoDaddy if needed
+          port: 21
           protocol: ftp  # Set to 'ftps' if using FTPS
