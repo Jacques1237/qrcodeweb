@@ -20,4 +20,4 @@ jobs:
           local-dir: ./  # Change to your build folder
           server-dir: /home/m7ryb96exju0/  # Change to your folder on GoDaddy if needed
           port: 21
-          protocol: ftps  # Set to 'ftps' if using FTPS
+          
