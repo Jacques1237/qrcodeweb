@@ -1,4 +1,4 @@
-name: Deploy to GoDaddy via FTP
+name: Deploy to GoDaddy via SFTP
 
 on:
   workflow_dispatch:  # Allow manual trigger from GitHub Actions tab
@@ -11,14 +11,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy to GoDaddy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy to GoDaddy via SFTP
+        uses: appleboy/ftp-action@v1.2.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./  # Change to your build folder
-          server-dir: /public_html/   # Change to your folder on GoDaddy if needed
-          port: 22  # SFTP typically uses port 22
-          protocol: sftp
-          
+          host: ${{ secrets.FTP_SERVER }}  # FTP server (e.g., ftp.qrcodegens.com)
+          username: ${{ secrets.FTP_USERNAME }}  # FTP username
+          password: ${{ secrets.FTP_PASSWORD }}  # FTP password
+          port: 22  # SFTP port
+          protocol: sftp  # Use SFTP instead of FTP
+          local-dir: ./  # Local directory to deploy
+          server-dir: /public_html/  # Remote server directory
