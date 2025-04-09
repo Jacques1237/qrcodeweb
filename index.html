@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free and easy QR code generator with customization options. Generate, customize, and download your QR code instantly.">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>QR Code Generator</h1>
+            <p>Create, customize, and download your QR codes easily.</p>
+            <br>
+        </header>
+        <main class="main-content">
+            <div class="card">
+                <!-- Button to select QR code type -->
+                <div class="qr-type-selection">
+                    
+                    <button class="button" id="urlBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link w-5 h-5">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        <br>URL
+                    </button>
+                    <button class="button" id="textBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square w-5 h-5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                            </path>
+                        </svg>
+                        <br>Text
+                    </button>
+                    
+                    <button class="button" id="wifiBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi w-5 h-5"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg>
+                        <br>Wi-Fi</button>
+                    <button class="button" id="emailBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                       <br> Email</button>
+
+                       <button class="button" id="phoneBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-5 h-5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                        </svg><br>Phone Number</button>
+                </div>
+                
+                <!-- Dynamic input fields for QR code content -->
+                <div id="qrContentField">
+                    <input type="text" id="qrInput" placeholder="Enter content for QR code" />
+                </div>
+
+                <!-- Customization options -->
+                <div class="customization-options">
+                    <label for="qrColor">QR Color:</label>
+                    <input style='border: none;' type="color" id="qrColor" value="#000000">
+                    
+                    <label for="qrSize">Size:</label>
+                    <input type="range" id="qrSize" min="100" max="500" value="256">
+                    <span id="sizeValue">256px</span>
+                </div>
+                
+                <button class="button" id="generateBtn">Generate QR Code</button>
+
+                <!-- QR Code display (centered) -->
+                <div id="qrCode" class="qr-code-container"></div>
+
+                <!-- Download Buttons -->
+                <div id="downloadButtons2" class="hidden">
+                    <button class="button" id="downloadPngBtn">Download PNG</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+
+            <p>&copy; 2025 QR Code Generator. No login, no ads.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
