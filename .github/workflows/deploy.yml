@@ -14,8 +14,9 @@ jobs:
       - name: Deploy to GoDaddy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./  # Change to your build folder
-          server-dir: /public_html/  # Change to your folder on GoDaddy if needed
+          server: ${{ secrets.FTP_SERVER }}  # FTP server (e.g., ftp.qrcodegens.com)
+          username: ${{ secrets.FTP_USERNAME }}  # FTP username
+          password: ${{ secrets.FTP_PASSWORD }}  # FTP password
+          port: 21  # FTP port
+          local-dir: ./  # Local directory to deploy
+          server-dir: /public_html/  # Remote server directory
