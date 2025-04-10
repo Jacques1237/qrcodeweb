@@ -24,7 +24,7 @@ body.dark-mode {
 
 .container {
     width: 100%;
-    max-width: 600px;
+    max-width: 100vh;
     padding: 30px;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 12px;
@@ -353,6 +353,143 @@ textarea:focus {
     color: #555;
 }
 
+.timeline-custom {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+  
+  .timeline-item-custom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-item-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+  
+  .timeline-img img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
 
+  .timeline-img2 img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+  
+  .timeline-content-custom h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content-custom p {
+    margin: 0;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-item-custom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  /* From Uiverse.io by mi-series */ 
+.button3 {
+    width: 150px;
+    padding: 0;
+    border: none;
+    transform: rotate(5deg);
+    transform-origin: center;
+    font-family: "Gochi Hand", cursive;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #5cdb95;
+  }
+  
+  .button3 span {
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+  }
+  
+  .button3:active {
+    transform: translateY(5px);
+    padding-bottom: 0px;
+    outline: 0;
+  }
+  
+  .buttonGen {
+    --color: #089d28;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    max-width: 300px;
+   }
    
+   .buttonGen::before, .buttonGen::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .buttonGen::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .buttonGen::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .buttonGen:hover::before, .buttonGen:hover::after {
+    height: 1000px;
+    width: 1000px;
+   }
+   
+   .buttonGen:hover {
+    color: rgb(255, 255, 255);
+   }
+   
+   .buttonGen:active {
+    filter: brightness(.8);
+   }
  

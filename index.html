@@ -27,8 +27,9 @@
 <body>
     <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-1252547929099377">
-    </amp-auto-ads>
-    <div class="container">
+    </amp-auto-ads>  
+    <br>
+    <div class="container" id="container">
         <header>
             <h1>QR Code Generator</h1>
             <p>Create free, unlimited QR codes for your website, product, or event. Fast, easy, and no sign-up needed.</p>
@@ -80,7 +81,7 @@
                     <span id="sizeValue">256px</span>
                 </div>
                 
-                <button class="button" id="generateBtn">Generate QR Code</button>
+                <button class="buttonGen" id="generateBtn">Generate QR Code</button>
 
                 <!-- QR Code display (centered) -->
                 <div id="qrCode" class="qr-code-container"></div>
@@ -93,8 +94,116 @@
         </main>
     </div>
     <br>
+    <section class="how-to-use-section container py-5">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10 text-center">
+            <button class="button3 badge badge-primary badge-pill badge-lg mb-4">
+                <span>How to Use</span>
+            </button>
+            <br>
+          </div>
+        </div>
+        <div class="timeline-custom">
+          <!-- Step 1 -->
+          <div class="timeline-item-custom">
+            <div class="timeline-img">
+              <img src="select.gif" alt="Choose QR Code" />
+            </div>
+            <div class="timeline-content-custom">
+              <h5 style="color: #45a049;">Step 1: Choose QR Code Type</h5>
+              <p>Select from options like URL, Text, Email, Wi-Fi, or more using the buttons above.</p>
+            </div>
+          </div>
+      
+          <!-- Step 2 -->
+          <div class="timeline-item-custom">
+            <div class="timeline-img">
+              <img src="typing.gif" alt="Fill fields" />
+            </div>
+            <div class="timeline-content-custom">
+              <h5  style="color: #45a049;">Step 2: Fill Required Fields</h5>
+              <p>Enter the info the QR code needs — like your website link or contact details.</p>
+            </div>
+          </div>
+      
+          <!-- Step 3 -->
+          <div class="timeline-item-custom">
+            <div class="timeline-img">
+              <img src="QR.gif" alt="Download and Share" />
+            </div>
+            <div class="timeline-content-custom">
+              <h5 style="color: #45a049;">Step 3: Generate & Share</h5>
+              <p>Click "Generate QR Code", download it instantly, and use it anywhere you want.</p>
+            </div>
+          </div>
+        </div>
+      <br>
+      <br>
+        <div class="text-center mt-4">
+          <a href="#container" class="button">
+            <button class="button3 badge badge-primary badge-pill badge-lg mb-4">
+                <span>Generate QR Code</span>
+            </button>
+            
+            <i class="fas fa-arrow-up ml-2"></i>
+          </a>
+        </div>
+      </section>
+      <br>
+      <section class="container my-5">
+      
+        <div class="text-center mb-4">
+            <div>
+                <img style="width: 40px; height: 40px;" src="question.gif" alt="Fill fields" />
+                <button class="button3 badge badge-primary badge-pill badge-lg mb-4">
+                    <span>
+                        Why QRCodeGens?
+                    </span>
+                </button>
+                <img style="width: 40px; height: 40px;" src="question.gif" alt="Fill fields" />
+            </div>
+            <br>
+            <br>
+          <div>
+            <div class="timeline-content-custom">
+                <div class="container" style="background-color: aliceblue;">
+                    <h5 style="color: #45a049;">Benefits of Using QRCodeGens</h5>
+                    <p>We make it easy to create powerful, customized, and trackable QR Codes for all your business or personal needs.</p>
+                </div>
+            </div>
+            <br>
+            <div class="timeline-content-custom">
+                <div class="container" style="background-color: aliceblue;">
+                    <h5 style="color: #45a049;">Unlimited QR Code Creation</h5>
+                    <p>Generate unlimited static and dynamic QR codes for free — no hidden fees.</p>
+                </div>
+                
+              </div>
+              <br>
+              <div class="timeline-content-custom">
+                <div class="container" style="background-color: aliceblue;">
+                    <h5 style="color: #45a049;">Privacy & Security Focused</h5>
+                    <p>We prioritize your data and privacy with secure QR code generation and analytics.</p>
+                </div>
+                
+              </div>
+              <br>
+              <div class="timeline-content-custom">
+                <div class="container" style="background-color: aliceblue;">
+                    <h5 style="color: #45a049;">Accessible Anywhere</h5>
+                    <p>Access your dashboard and QR codes anytime from any device, anywhere in the world.</p>
+                </div>
+                  
+                </div>
+          </div>
+      </section>
+      <br>
     <div class="container">
-        <h2>FAQ</h2>
+        <button class="button3 badge badge-primary badge-pill badge-lg mb-4">
+            <span>FAQ</span>
+        </button>
+        <br>
+        <br>
         <br>
             <div>
               <div>
@@ -117,6 +226,7 @@
                   limitations. We don't track your data nor do we require a sign in.
                 </p>
               </div>
+              
     </div>
     <script src="script.js"></script>
 </body>
